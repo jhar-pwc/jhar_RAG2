@@ -25,12 +25,6 @@ from gen_ai_hub.proxy.core.proxy_clients import get_proxy_client
 from dotenv import load_dotenv
 load_dotenv()
 
-os.environ['AICORE_AUTH_URL']=os.getenv("AICORE_AUTH_URL")
-os.environ['AICORE_CLIENT_ID']=os.getenv("AICORE_CLIENT_ID")
-os.environ['AICORE_CLIENT_SECRET']=os.getenv("AICORE_CLIENT_SECRET")
-os.environ['AICORE_RESOURCE_GROUP']=os.getenv("AICORE_RESOURCE_GROUP")
-os.environ['AICORE_BASE_URL']= os.getenv("AICORE_BASE_URL")
-os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 #os.environ['OPENAI_API_BASE'] = "https://api.ai.prod.us-east-1.aws.ml.hana.ondemand.com/v2/inference/deployments/openai-embedding/v1"
 
  
@@ -248,3 +242,4 @@ else:
     st.warning("Please enter Your Authentication parameter (OPen API Key) to proceed",icon="⚠")
 
  
+
