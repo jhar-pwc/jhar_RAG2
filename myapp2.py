@@ -21,7 +21,7 @@ from langchain_community.chat_models import ChatOpenAI
 #from gen_ai_hub.proxy.langchain.init_models import  init_embedding_model
 import chromadb
 import os
-from gen_ai_hub.proxy.core.proxy_clients import get_proxy_client
+#from gen_ai_hub.proxy.core.proxy_clients import get_proxy_client
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -30,7 +30,7 @@ load_dotenv()
  
 ###
 
-proxy_client = get_proxy_client('gen-ai-hub')
+#proxy_client = get_proxy_client('gen-ai-hub')
 os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
 #st.secrets("GROQ_API_KEY")
 #st.secrets("OPENAI_API_KEY")
@@ -242,4 +242,5 @@ else:
     st.warning("Please enter Your Authentication parameter (OPen API Key) to proceed",icon="⚠")
 
  
+
 
