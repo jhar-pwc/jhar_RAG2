@@ -1,4 +1,4 @@
-langchain
+langchain==0.2.13
 ipykernel
 langchain_core
 langchain_openai
@@ -7,3 +7,4 @@ streamlit
 langchain_groq
 Python-dotenv
 langchain_chroma
+
