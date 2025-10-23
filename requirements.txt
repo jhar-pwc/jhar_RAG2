@@ -1,5 +1,6 @@
 langchain==0.2.13
 ipykernel
+pypdf
 langchain_core
 langchain_openai
 langchain_community
@@ -7,4 +8,5 @@ streamlit
 langchain_groq
 Python-dotenv
 langchain_chroma
+
 
