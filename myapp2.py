@@ -1,7 +1,8 @@
 ## RAG Q&A Conversation With PDF Including Chat History
 
 import streamlit as st
-from langchain.chains import   create_history_aware_retriever, create_retrieval_chain
+from langchain.chains.history_aware_retriever import   create_history_aware_retriever
+from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
@@ -32,28 +33,18 @@ os.environ['AICORE_BASE_URL']= os.getenv("AICORE_BASE_URL")
 os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 #os.environ['OPENAI_API_BASE'] = "https://api.ai.prod.us-east-1.aws.ml.hana.ondemand.com/v2/inference/deployments/openai-embedding/v1"
 
-  
-
+ 
 ###
 
 proxy_client = get_proxy_client('gen-ai-hub')
 os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
+#st.secrets("GROQ_API_KEY")
+#st.secrets("OPENAI_API_KEY")
 # Create Open AI embeddingsvsing Gen AI HUB
 #embeddings = init_embedding_model('text-embedding-ada-002')
 embeddings = OpenAIEmbeddings()
 #embeddings = OllamaEmbeddings()
 
-
-#embeddings = OpenAIEmbeddings(
-
-  #model="text-embedding-3-small",
-
-  # openai_api_key= os.environ["OPENAI_API_KEY"],
-
-   #deployment=os.environ["DEPLOYMENT_ID"]  
-
-#)
-## set up Streamlit
 
 st.set_page_config(page_title=" A Conversational RAG  Application ", page_icon="🧊",
 
